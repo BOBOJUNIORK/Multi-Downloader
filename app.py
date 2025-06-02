@@ -1,4 +1,3 @@
-
 import os
 import logging
 import json
@@ -124,7 +123,7 @@ def get_info():
 
     info = get_video_info(url)
     if not info:
-        return jsonify({'error': 'Impossible d'extraire les informations'}), 400
+        return jsonify({'error': "Impossible d'extraire les informations"}), 400
     return jsonify(info)
 
 @app.route('/download', methods=['POST'])
